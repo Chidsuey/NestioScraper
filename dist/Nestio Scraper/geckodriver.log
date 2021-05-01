@@ -1,0 +1,49 @@
+1600981710828	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\therrick\\AppData\\Local\\Temp\\rust_mozprofile1HLFZu"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1600981713804	Marionette	INFO	Listening on port 64097
+1600981714009	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.funnelleasing.com/archer/dist/public.js?75db45, line 70: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1600981770524	Marionette	INFO	Stopped listening on port 64097
+1605828994016	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\therrick\\AppData\\Local\\Temp\\rust_mozprofile3A3J3g"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1605828996632	Marionette	INFO	Listening on port 63717
+1605828996682	Marionette	WARN	TLS certificate errors will be ignored for this session
+1605829021892	Marionette	INFO	Stopped listening on port 63717
