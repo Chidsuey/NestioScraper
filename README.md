@@ -16,4 +16,4 @@ which carry the most current data of landlords that use it. These emails are all
 2. Pulls information from websites or emails specific to particular companies that don't use Nestio.
 
 ## What it looks like
-![alt text]https://github.com/Chidsuey/NestioScraper/blob/master/Nestio%20Scraper.PNG
+![Nestio Scraper](https://github.com/Chidsuey/NestioScraper/blob/master/Nestio%20Scraper.PNG)
