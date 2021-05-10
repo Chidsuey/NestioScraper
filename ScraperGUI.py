@@ -124,7 +124,7 @@ class GUI:
         self.test_button = Button(self.print_out_progress_frame, text="Test",command=self.test_something)
         self.test_button.place(x=5, y=55)
         self.modules_button = Button(self.print_out_progress_frame,text="Modules", command=self.modules_window)
-        self.modules_button.place(x=270, y=85)
+        self.modules_button.place(x=5, y=85)
         self.comparison_button = Button(self.print_out_progress_frame, text="Compare", command=self.comparison_window)
         self.comparison_button.place(x=5, y=25)
 
