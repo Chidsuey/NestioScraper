@@ -14,3 +14,6 @@ which carry the most current data of landlords that use it. These emails are all
 ## Additional features
 1. Uses XLRD to compare two excel files, and report back only the changes between the two
 2. Pulls information from websites or emails specific to particular companies that don't use Nestio.
+
+## What it looks like
+![Nestio Scraper](https://github.com/Chidsuey/NestioScraper/blob/master/Nestio%20Scraper.PNG)
