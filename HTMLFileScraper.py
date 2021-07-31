@@ -23,7 +23,7 @@ class HTMLFileScraper:
         if (owner_name == "NotFound"):
             for tag in self.soup.find_all('p'):
                 #try:
-                if tag.span.text == "Subject:                                     ":
+                if tag.span.text == "Subject: ":
                     owner_name = (tag.span.parent.next_sibling.text)
                     break
 

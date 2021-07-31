@@ -24,16 +24,20 @@ class CitySkyline:
         i = 0
         for tag in html_file_scraper.soup.find_all("tr"):
             children = tag.findChildren('td')
-            if children[0].text == "\nRECENTLY RENTED":
-                break
-            if children[0].text == "\nBRONX":
+            try:
+                if children[0].text == "\nRECENTLY RENTED":
+                    break
+                if children[0].text == "\nBRONX":
+                    continue
+                if children[0].text == "\nMANHATTAN":
+                    continue
+                data_matrix.append([])
+                for child in children:
+                    data_matrix[i].append(child.text)
+                i += 1
+            except:
                 continue
-            if children[0].text == "\nMANHATTAN":
-                continue
-            data_matrix.append([])
-            for child in children:
-                data_matrix[i].append(child.text)
-            i += 1
+
         del data_matrix[:6]
         for i in data_matrix:
             for j in range(0, len(i)):
@@ -43,6 +47,7 @@ class CitySkyline:
         #    print(i)
         return data_matrix
 
+
     def correct_data(self, data):
         for i in data:
             if len(i) < 6:
@@ -51,6 +56,11 @@ class CitySkyline:
 
 
     def compare_email_data(self, old_email_data, new_email_data):
+        for item in old_email_data:
+            if len(item) < 3:
+                continue
+            else:
+                self.total_listings += 1
         difference_matrix = []
         rented_list = []
         new_listings = []
@@ -95,7 +105,7 @@ class CitySkyline:
                     break
             if new_listing:
                 new_listings.append(new_email_data[i])
-
+        self.total_listings -= len(rented_list)
         #self.print_data(difference_matrix, rented_list, new_listings)
         self.adapt_data_for_output(difference_matrix, rented_list, new_listings)
 
@@ -130,6 +140,7 @@ class CitySkyline:
             for j, k in enumerate(new_listings[i]):
                 excel_file_handler.write_to_excel_file(i + row_offset, j, k)
         row_offset += len(new_listings) + 1
+        self.total_listings += len(new_listings)
         excel_file_handler.finalize_spreadsheet(row_offset, self.total_listings,  "City Skyline")
 
 

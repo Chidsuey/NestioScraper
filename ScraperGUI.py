@@ -1,12 +1,14 @@
 from tkinter import *
 from _io import TextIOWrapper
 import FileHandler
+import LCLemle
 import LogHandler
 import ExcelFileHandler
 import HTMLFileScraper
 import LinkScraper
 import DataComparison
 import ElevenThirteenManhattan
+import Paley
 import TheEugene
 import CitySkyline
 import Bettina
@@ -14,6 +16,7 @@ import R9300
 import Solil
 import Eberhart
 import Metronest
+import Harlington
 import time
 import sys
 
@@ -120,7 +123,7 @@ class GUI:
         self.options_button = Button(self.print_out_progress_frame, text="Options", command=self.options_button_click)
         self.options_button.place(x=5, y=115)
         self.link_button = Button(self.print_out_progress_frame, text="Soup", command=self.link_window)
-        #self.link_button.place(x=5, y=85)
+        self.link_button.place(x=5, y=85)
         self.test_button = Button(self.print_out_progress_frame, text="Test",command=self.test_something)
         self.test_button.place(x=5, y=55)
         self.modules_button = Button(self.print_out_progress_frame,text="Modules", command=self.modules_window)
@@ -223,6 +226,12 @@ class GUI:
 
 
     def module_buttons(self, window):
+        paley_button = Button(window, text="Paley", command=self.paley)
+        paley_button.pack()
+        lclemle_button = Button(window, text="LC Lemle", command=self.lclemle)
+        lclemle_button.pack()
+        harlington_button = Button(window, text="Harlington", command=self.harlington)
+        harlington_button.pack()
         e_t_manhattan_button = Button(window, text="1133 Manhattan", command=self.scrape_eleven_thirteen_manhattan)
         e_t_manhattan_button.pack()
         the_eugene_button = Button(window, text="The Eugene", command=self.scrape_the_eugene)
@@ -264,13 +273,31 @@ class GUI:
         theEugene.output_all_the_info(finalized_info_list, fileHandler.date_and_time_snapshot())
         linkScraper.close_driver()
 
+    def lclemle(self):
+        linkScraper.open_webdriver(self.set_progress_text)
+        lclemle = LCLemle.LCLemle(excelFileHandler, linkScraper.driver)
+        lclemle.do_all_the_things(fileHandler.date_and_time_snapshot())
+
+    def paley(self):
+        linkScraper.open_webdriver(self.set_progress_text)
+        paley = Paley.Paley(excelFileHandler, linkScraper.driver)
+        paley.do_all_the_things(fileHandler.date_and_time_snapshot())
+
     def test_something(self):
-        self.Metronest()
+        pass
+        # linkScraper.open_webdriver(self.set_progress_text)
+        # paley = Paley.Paley(excelFileHandler, linkScraper.driver)
+        # paley.do_all_the_things(fileHandler.date_and_time_snapshot())
         #self.just_scrape_one_link("https://nestiolistings.com/p/listing/105/3402078/10/5kj-2f285a46f408e4bdf6b0/?utm_source=email-blast&utm_medium=inline")
         #with open(self.html_file) as f:
 
         #    print(f.encoding)
         # pass
+    def harlington(self):
+        linkScraper.open_webdriver(self.set_progress_text)
+        harlington = Harlington.Harlington(excelFileHandler, linkScraper.driver)
+        harlington.do_all_the_things(fileHandler.date_and_time_snapshot())
+
 
     def Metronest(self):
         metronest = Metronest.Metronest(self.root, self.coding)
@@ -319,12 +346,13 @@ class GUI:
 
 
     def bettina(self):
-        bettina = Bettina.Bettina(excelFileHandler)
         linkScraper.open_webdriver(self.set_progress_text)
         linkScraper.driver.get("https://www.bettinaequities.com/availabilites/")
-        pre_finalized_info_list = bettina.matrix_data_from_website(linkScraper.driver)
-        bettina.output_all_the_info(pre_finalized_info_list, fileHandler.date_and_time_snapshot())
-        linkScraper.close_driver()
+        bettina = Bettina.Bettina(excelFileHandler, linkScraper.driver)
+        bettina.do_all_the_things(fileHandler.date_and_time_snapshot())
+        # pre_finalized_info_list = bettina.matrix_data_from_website(linkScraper.driver)
+        # bettina.output_all_the_info(pre_finalized_info_list, fileHandler.date_and_time_snapshot())
+        # linkScraper.close_driver()
 
     def eberhart(self):
         eberhart = Eberhart.Eberhart(self.just_scrape_one_link)

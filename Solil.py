@@ -26,9 +26,15 @@ class Solil:
             if self.data_exceptions(listing_list):
                 continue
             if "bgcolor" in tag.find('td').attrs:
-                listing_list.append(self.color_converter(tag.find('td').attrs["bgcolor"]))
+                if tag.find('td').attrs["bgcolor"] == "#99F16C" or tag.find('td').attrs["bgcolor"] == "#92D050":
+                    listing_list.append("Same")
+                    listing_list.append("Approved")
+                else:
+                    listing_list.append(self.color_converter(tag.find('td').attrs["bgcolor"]))
+                    listing_list.append("Unapproved")
             else:
                 listing_list.append("Colorless")
+                listing_list.append("Unapproved")
             data_matrix.append(listing_list)
         self.total_listings = self.correct_listings_count(data_matrix)
         return data_matrix
@@ -65,7 +71,7 @@ class Solil:
         rented_list = []
         new_listings = []
         data_types = ["Address: ", "Apt: ", "Bed: ", "Bath: ", "Price: ", "Avail: ", "Super: ", "Access: ",
-                      "Incentives: "]
+                      "Incentives: ", "Status: "]
         difference_count = 0
         for i in range(0, len(old_email_data)):
             if len(old_email_data[i]) < 2:
@@ -85,7 +91,10 @@ class Solil:
                                 difference_matrix[difference_count].append(new_email_data[j][1])
                                 first_difference = False
                             if new_email_data[j][k] is not None:
-                                difference_matrix[difference_count].append(data_types[k] + " " + new_email_data[j][k])
+                                if new_email_data[j][k] == "Same":
+                                    continue
+                                else:
+                                    difference_matrix[difference_count].append(data_types[k] + " " + new_email_data[j][k])
 
                     if not first_difference:
                         difference_count += 1
